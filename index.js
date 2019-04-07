@@ -59,4 +59,39 @@ var cb3 = function (req, res) {
 app.get('/3callbacks', [cb1, cb2, cb3])
 
 
+function authenticate (req) {
+	let a = 2;
+	let b = 2;
+	if (a + b === 4) {
+		return true
+	} else {
+		return false
+	}
+}
+
+// // Middleware function examples
+//
+// var middleware1 = function (req, res, next) {
+// 	console.log("Middleware 1 was executed");
+// 	next()
+// }
+//
+// app.use("/hello", middleware1);
+//
+// var authentication = function (req, res, next) {
+// 	isAuthenticated = authenticate(req);
+// 	if (isAuthenticated) {
+// 		console.log("Authenticated");
+// 	} else {
+// 		console.log("Access denied!")
+// 	}
+// 	next()
+// }
+// 
+//
+// app.use(authentication);
+
+
+
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
